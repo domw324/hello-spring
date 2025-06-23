@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import hello.hello_spring.domain.Member;
 
+// @Repository // Component scan으로 자동으로 주입방식 해제
 public class MemoryMemberRepository implements MemberRepository {
 	private static Map<Long, Member> store = new HashMap<>();
 	private static long sequence = 0L;

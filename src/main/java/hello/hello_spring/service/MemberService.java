@@ -8,9 +8,12 @@ import hello.hello_spring.repository.MemberRepository;
 
 // class 선택하고 `Ctrl+Shift+P` 누르고 "Java:Go to test" 누르면 테스트 파일 생성 가능.
 // intelliJ IDE 에서는 더 디테일하게 설정 가능
+
+// @Service // Component scan으로 자동으로 주입방식 해제
 public class MemberService {
 	private final MemberRepository memberRepository;
 
+	// @Autowired // Component scan: 컨테이너에 있는 MemberService를 가져와서 자동으로 주입
 	public MemberService(MemberRepository memberRepository) {
 		this.memberRepository = memberRepository;
 	}
