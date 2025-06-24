@@ -131,17 +131,20 @@ spring boot 프로젝트 생성은 [spring initializr](https://start.spring.io/)
 
 ## 2-1. 정적 컨텐츠
 ![정적 컨텐츠](./README_asset/02_static_content.png)
+
 스프링 컨테이너가 우선순위를 가진다. 여기에 컨트롤러가 없으면 파일을 찾아서 표시해준다.
 
 ## 2-2. MVC와 템플릿 엔진
 MVC = Model, View, Controller
 ##### Controller
 ![MVC & Template 엔진](./README_asset/02_mvc_template_content.png)
+
 - controller에 정의된 함수가 return 한 값으로 template을  찾는다.
 - 함수 return값과 templates의 파일명이 일치해야 함
 
 ## 2-3. API
 ![API](./README_asset/02_api_content.png)
+
 ##### `@ResponseBody` 사용
 - HTTP의 body에 문자 내용을 직접 반환
 - `viewResolver` 대신에 `HttpMessageConverter`가 동작
@@ -173,6 +176,7 @@ MVC = Model, View, Controller
 - 아직 데이터 저장소가 선정되지 않음(가상 시나리오)
 #### 일반적인 웹 애플리케이션 계층 구조
 ![일반적 웹 애플리케이션 계층 구조](./README_asset/03.general_web_application.png)
+
 - 컨트롤러: 웹 MVC의 컨트롤러 역할
 - 서비스: 핵심 비즈니스 로직 구현
 - 리포지토리: 데이터베이스에 접근, 도메인 객체를 DB에 저장하고 관리
@@ -181,6 +185,7 @@ MVC = Model, View, Controller
 
 ##### 예제 클래스 의존관계
 ![예제 클래스 다이어그램](./README_asset/03.ex_class_diagram.png)
+
 - 아직 데이터 저장소가 선정되지 않아서, 우선 인터페이스로 구현 클래스를 변경할 수 있도록 설계
 - 데이터 저장소는 RDB, NoSQL 등등 다양한 저장소를 고민 중인 상황으로 가정
 - 개발을 진행하기 위해서 초기 개발 단계에서는 구현체로 가벼운 메모리 기반의 데이터 저장소 사용
@@ -214,9 +219,11 @@ MVC = Model, View, Controller
 IDE를 사용한다면 test 작성 시 실행할 수 있는 버튼이 뜬다. 누르면 된다.
 ##### 성공 시
 ![Test 성공](./README_asset/03.ex_test_seccess.png)
+
 성공하면 위와 같이 초록색으로 check 표시
 ##### 실패 시
 ![Test 실패](./README_asset/03.ex_test_fail.png)
+
 일부러 actual=null 삽입해서 실패하도록 변경 한 상황. 빨간색 X 표시
 
 
